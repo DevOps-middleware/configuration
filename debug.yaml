@@ -3,9 +3,13 @@
   become: yes
   vars:
     name: vasim
-  
+    state: NELLORE
   tasks:
   - name: this task is to convert lower case into upper case
     ansible.builtin.debug:
       msg: "{{ name | upper }}"
       
+
+  - name: this task is to convert lower case into upper case
+    ansible.builtin.debug:
+      msg: "{{ state | lower }}"
