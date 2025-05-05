@@ -5,5 +5,5 @@
   tasks:
   - name: this task is to convert lower case into upper case
     ansible.builtin.debug:
-      msg: "{{vasim | ('VASIM')}}"
+      msg: "{{vasim | VASIM}}"
       
