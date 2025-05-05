@@ -1,9 +1,11 @@
 - name: this playbook is to test the debug message
   hosts: nginx
   become: yes
+  vars:
+    name: vasim
   
   tasks:
   - name: this task is to convert lower case into upper case
     ansible.builtin.debug:
-      msg: "{{vasim | upper}}"
+      msg: "{{ name | upper }}"
       
