@@ -3,6 +3,6 @@
 
 
 [vars:nginx]
-name: vasim
-district: nellore
+name= vasim
+district= nellore
 
