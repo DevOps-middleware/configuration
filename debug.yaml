@@ -16,4 +16,4 @@
 
   - name: split url into hostname
     ansible.builtin.debug:
-      msg: {{ "http://user:password@www.acme.com:9000/dir/index.html?query=term#fragment" | urlsplit("hostname") }}'
+      msg: "{{ http://user:password@www.acme.com:9000/dir/index.html?query=term#fragment | urlsplit('hostname') }}"
