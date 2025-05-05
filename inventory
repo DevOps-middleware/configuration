@@ -2,4 +2,7 @@
 172.31.20.234
 
 
+[vars:nginx]
+name: vasim
+district: nellore
 
