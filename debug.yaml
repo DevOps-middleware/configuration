@@ -3,18 +3,7 @@
   become: yes
   
   tasks:
-    - name: install nginx
-      tags:
-        - installation
-      ansible.builtin.yum:
-        name: nginx
-        state: installed
-
-    - name: start and enable nginx
-      tags:
-        - starting
-      ansible.builtin.service:
-        name: nginx
-        state: started
-        enabled: yes
+  - name: this task is to convert lower case into upper case
+    ansible.builtin.debug:
+      msg: "{{vasim | ('VASIM')}}"
       
