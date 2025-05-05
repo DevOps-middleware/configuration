@@ -23,3 +23,7 @@
   - name: split the data
     ansible.builtin.debug:
       msg: "{{ greeting | split(',') }}"
+  
+  - name: printing undefined variables
+    ansible.builtin.debug:
+      msg: "{{ course | default("Devops") }}"
