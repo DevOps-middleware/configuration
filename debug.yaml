@@ -26,4 +26,4 @@
   
   - name: printing undefined variables
     ansible.builtin.debug:
-      msg: "{{ course | default("Devops") }}"
+      msg: "{{ course | default( 'Devops') }}"
