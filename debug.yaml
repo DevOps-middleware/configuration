@@ -3,6 +3,16 @@
   become: yes
   
   tasks:
-    - name: print the message
-      ansible.builtin.debug:
-        msg: "my name is {{name}}: i am from {{district}}"
+    - name: install nginx
+      tags:
+        -installation
+      ansible.builtin.yum:
+        name: nginx
+        state: installed
+
+    - name: start and enable nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
+      
